@@ -1,3 +1,4 @@
+import 'package:cat_habits/Components/footer.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -10,10 +11,31 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Cat Habits",
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: const Color(
+          0xFF596A13,
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings_outlined), // Ícono de ajustes de Material Design
+            color: Colors.white,
+            iconSize: 33,
+            onPressed: () {
+              // Acción cuando se presiona el ícono
+              print('Ajustes presionado');
+            },
+          ),
+        ],
+      ),
       body: const Center(
         child: Text("Esta es la pagina home"),
       ),
+      bottomNavigationBar: const Footer(),
     );
   }
 }
