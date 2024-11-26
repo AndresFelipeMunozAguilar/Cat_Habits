@@ -4,7 +4,7 @@ class Footer extends StatelessWidget {
   const Footer({super.key});
 
   //está en pixeles
-  final double iconsSize = 40;
+  final double iconsSize = 33;
 
   @override
   Widget build(BuildContext context) {
