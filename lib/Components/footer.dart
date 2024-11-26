@@ -30,14 +30,16 @@ class Footer extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               shape: BoxShape.circle,
+              color: Colors.white,
               border: Border.all(
                   color: Colors.white,
                   width: 2), // Borde blanco alrededor del ícono
             ),
-            child: Icon(
-              Icons.add,
-              color: Colors.white,
-              size: iconsSize * 2, // Tamaño mayor para el tercer ícono
+            child: IconButton(
+              icon: Icon(Icons.add),
+              color: Colors.black,
+              iconSize: iconsSize, // Tamaño mayor para el tercer ícono
+              onPressed: () => {},
             ),
           ),
           IconButton(
