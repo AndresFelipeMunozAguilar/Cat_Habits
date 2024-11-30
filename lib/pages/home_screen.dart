@@ -22,7 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.settings_outlined), // Ícono de ajustes de Material Design
+            icon: const Icon(
+                Icons.settings_outlined), // Ícono de ajustes de Material Design
             color: Colors.white,
             iconSize: 33,
             onPressed: () {
@@ -32,9 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: const Center(
-        child: Text("Esta es la pagina home"),
-      ),
+      body: const Text("me pican los cocos"),
       bottomNavigationBar: const Footer(),
     );
   }

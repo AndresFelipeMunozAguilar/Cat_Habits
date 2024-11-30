@@ -16,40 +16,44 @@ class Footer extends StatelessWidget {
             MainAxisAlignment.spaceEvenly, // Espaciado igual entre íconos
         children: [
           IconButton(
-            icon: Icon(Icons.bar_chart),
+            icon: const Icon(Icons.bar_chart),
             color: Colors.white,
             iconSize: iconsSize,
             onPressed: () => {},
           ),
           IconButton(
-            icon: Icon(Icons.calendar_month_outlined),
+            icon: const Icon(Icons.calendar_month_outlined),
             color: Colors.white,
             iconSize: iconsSize,
             onPressed: () => {},
           ),
-          Container(
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-              border: Border.all(
-                  color: Colors.white,
-                  width: 2), // Borde blanco alrededor del ícono
-            ),
-            child: IconButton(
-              icon: Icon(Icons.add),
-              color: Colors.black,
-              iconSize: iconsSize, // Tamaño mayor para el tercer ícono
-              onPressed: () => {},
-            ),
-          ),
+          Transform.translate(
+              offset: const Offset(0, -10),
+              child: Transform.scale(
+                  scale: 1.5,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.white,
+                      border: Border.all(
+                          color: Colors.black,
+                          width: 2), // Borde blanco alrededor del ícono
+                    ),
+                    child: IconButton(
+                      icon: const Icon(Icons.add),
+                      color: Colors.black,
+                      iconSize: iconsSize, // Tamaño mayor para el tercer ícono
+                      onPressed: () => {},
+                    ),
+                  ))),
           IconButton(
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
             color: Colors.white,
             iconSize: iconsSize,
             onPressed: () => {},
           ),
           IconButton(
-            icon: Icon(Icons.chat_bubble_outline),
+            icon: const Icon(Icons.chat_bubble_outline),
             color: Colors.white,
             iconSize: iconsSize,
             onPressed: () => {},
