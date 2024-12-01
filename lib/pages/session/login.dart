@@ -1,5 +1,6 @@
 import 'package:cat_habits/Enviroment_vars/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Login extends StatelessWidget {
@@ -9,6 +10,9 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Ocultar la barra de navegación
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+
     return Scaffold(
       body: Container(
         color: Color(0xFFFFEA91), // Background color
@@ -37,7 +41,7 @@ class Login extends StatelessWidget {
 
             // Línea negra larga
             Divider(
-              color:  _estilos.colorText,
+              color: _estilos.colorText,
               thickness: 1.0,
             ),
             SizedBox(height: 16), // Espaciado entre elementos

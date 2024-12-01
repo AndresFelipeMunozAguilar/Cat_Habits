@@ -2,7 +2,6 @@ import 'package:cat_habits/pages/home_screen.dart';
 import 'package:cat_habits/pages/session/login.dart';
 import 'package:cat_habits/pages/session/singup.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
 void main() {
@@ -10,9 +9,6 @@ void main() {
   // de Flutter esté cargado antes de interactuar
   //con cualquier widget o realizar tareas asíncronas.
   WidgetsFlutterBinding.ensureInitialized();
-
-  // Ocultar la barra de navegación
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
 
   runApp(MyApp());
 }
