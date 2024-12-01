@@ -1,31 +1,38 @@
 import 'package:cat_habits/pages/home_screen.dart';
+import 'package:cat_habits/pages/session/login.dart';
+import 'package:cat_habits/pages/session/singup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 
 void main() {
-  
   // Se utiliza  para garantizar que el entorno
-  // de Flutter esté cargado antes de interactuar 
+  // de Flutter esté cargado antes de interactuar
   //con cualquier widget o realizar tareas asíncronas.
   WidgetsFlutterBinding.ensureInitialized();
 
   // Ocultar la barra de navegación
-  SystemChrome.setEnabledSystemUIMode(
-    SystemUiMode.immersiveSticky
-  );
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
 
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+final bool aux = true;
 
+class MyApp extends StatelessWidget {
+  MyApp({super.key});
+
+  final GoRouter _router =
+      GoRouter(initialLocation: (aux) ? '/login' : '/signup', routes: <GoRoute>[
+    GoRoute(path: "/", builder: ((context, state) => const HomeScreen())),
+    GoRoute(path: "/login", builder: ((context, state) => const Login())),
+    GoRoute(path: "/signup", builder: ((context, state) => const Singup()))
+  ]);
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    
-    return const MaterialApp(
-      title:  'Cat Habits',
+    return MaterialApp.router(
+      title: 'Cat Habits',
       debugShowCheckedModeBanner: false,
       // theme: ThemeData(
       //   // This is the theme of your application.
@@ -46,7 +53,8 @@ class MyApp extends StatelessWidget {
       //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       //   useMaterial3: true,
       // ),
-      home: HomeScreen()
+
+      routerConfig: _router,
     );
   }
 }

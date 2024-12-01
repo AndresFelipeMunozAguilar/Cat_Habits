@@ -28,7 +28,7 @@ class Footer extends StatelessWidget {
             onPressed: () => {},
           ),
           Transform.translate(
-              offset: const Offset(0, -10),
+              offset: const Offset(0, -20),
               child: Transform.scale(
                   scale: 1.5,
                   child: Container(
