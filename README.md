@@ -11,17 +11,12 @@
 - Gradle 8.3 ~ 8.9
 
 ## Cómo correr la aplicación
-1- Crear un nuevo proyecto de flutter de nombre "cat_habits"
-
-2- Correr el proyecto
-
-3- Copiar el archivo "pubspec.yaml" y la carpeta "lib" dentro de este proyecto en ejecución
-
-4- Correr el comando "flutter pub get" desde la carpeta raiz del proyecto en ejecución
-
-5- Realizar un Hot Restart 
-
-6- Interactuar con la aplicación
+1. Crear un nuevo proyecto de flutter de nombre "cat_habits"
+2. Correr el proyecto
+3. Copiar el archivo "pubspec.yaml" y la carpeta "lib" dentro de este proyecto en ejecución
+4. Correr el comando "flutter pub get" desde la carpeta raiz del proyecto en ejecución
+5. Realizar un Hot Restart 
+6. Interactuar con la aplicación
 
 
 ### Autores
