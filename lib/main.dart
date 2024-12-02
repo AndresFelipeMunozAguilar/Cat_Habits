@@ -15,15 +15,59 @@ void main() {
 
 const bool aux = true;
 
+//Esta es la animación que hace ver como si la siguiente página
+//entrara desde la derecha hacia la  izquierda al teléfono hasta
+//detenerse en el centro
+CustomTransitionPage _customPageTransition(Widget child, GoRouterState state) {
+  return CustomTransitionPage(
+    key: state.pageKey,
+    child: child,
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(1.0, 0.0); // Desliza desde la derecha
+      const end = Offset.zero; // Llega a la posición final
+      const curve = Curves.easeInOut;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var offsetAnimation = animation.drive(tween);
+
+      return SlideTransition(
+        position: offsetAnimation,
+        child: child,
+      );
+    },
+  );
+}
+
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
-  final GoRouter _router =
-      GoRouter(initialLocation: (aux) ? '/login' : '/signup', routes: <GoRoute>[
-    GoRoute(path: "/", builder: ((context, state) => const HomeScreen())),
-    GoRoute(path: "/login", builder: ((context, state) => Login())),
-    GoRoute(path: "/signup", builder: ((context, state) => Signup()))
-  ]);
+  final GoRouter _router = GoRouter(
+    initialLocation: '/login',
+    routes: <GoRoute>[
+      GoRoute(
+        path: "/",
+        pageBuilder: (context, state) => _customPageTransition(
+          const HomeScreen(),
+          state,
+        ),
+      ),
+      GoRoute(
+        path: "/login",
+        pageBuilder: (context, state) => _customPageTransition(
+          Login(),
+          state,
+        ),
+      ),
+      GoRoute(
+        path: "/signup",
+        pageBuilder: (context, state) => _customPageTransition(
+          Signup(),
+          state,
+        ),
+      ),
+    ],
+  );
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
