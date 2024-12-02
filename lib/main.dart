@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       GoRouter(initialLocation: (aux) ? '/login' : '/signup', routes: <GoRoute>[
     GoRoute(path: "/", builder: ((context, state) => const HomeScreen())),
     GoRoute(path: "/login", builder: ((context, state) => Login())),
-    GoRoute(path: "/signup", builder: ((context, state) => const Signup()))
+    GoRoute(path: "/signup", builder: ((context, state) => Signup()))
   ]);
   // This widget is the root of your application.
   @override
