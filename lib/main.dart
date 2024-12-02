@@ -13,7 +13,7 @@ void main() {
   runApp(MyApp());
 }
 
-final bool aux = true;
+const bool aux = true;
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
