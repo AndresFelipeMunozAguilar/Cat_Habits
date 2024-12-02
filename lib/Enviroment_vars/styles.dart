@@ -7,5 +7,7 @@ class StylesData {
 
   StylesData._internal();
 
-  Color colorText = Color(0xFF735F37);
+  Color colorText = const Color(0xFF735F37);
+  Color colorHintText = const Color(0xFF8F8579);
+  
 }

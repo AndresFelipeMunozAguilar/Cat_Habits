@@ -1,6 +1,6 @@
 import 'package:cat_habits/pages/home_screen.dart';
 import 'package:cat_habits/pages/session/login.dart';
-import 'package:cat_habits/pages/session/singup.dart';
+import 'package:cat_habits/pages/session/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       GoRouter(initialLocation: (aux) ? '/login' : '/signup', routes: <GoRoute>[
     GoRoute(path: "/", builder: ((context, state) => const HomeScreen())),
     GoRoute(path: "/login", builder: ((context, state) => Login())),
-    GoRoute(path: "/signup", builder: ((context, state) => const Singup()))
+    GoRoute(path: "/signup", builder: ((context, state) => const Signup()))
   ]);
   // This widget is the root of your application.
   @override
