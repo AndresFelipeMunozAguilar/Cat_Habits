@@ -206,6 +206,8 @@ class Login extends StatelessWidget {
                     ),
                   ],
                 ),
+
+                const SizedBox(height: 10), // Espaciado inicial ajustado
               ],
             ),
           ),
