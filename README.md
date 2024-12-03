@@ -20,6 +20,10 @@
 7. Realizar un Hot Restart 
 8. Interactuar con la aplicación
 
+***Nota:*** Se puede crear una cuenta o usar una cuenta ya existente. Si se quiere optar por iniciar sesión, en lugar de crear cuenta, las credenciales de inicio de sesión son:
+***Correo:*** 'admin@admin.com'
+***Contraseña:*** 'Password789'
+
 
 ### Autores
 - Andrés Felipe Muñoz Aguilar
