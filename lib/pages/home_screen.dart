@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: const Text("no me pican los cocos"),
+      body: const Text("ahora sí me pican los cocos"),
       bottomNavigationBar: const Footer(),
     );
   }
