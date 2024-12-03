@@ -286,7 +286,6 @@ class _HomeScreenState extends State<HomeScreen> {
               child: SizedBox(height: 20),
             ), // Espacio entre ListView y cuadrado final
 
-            // Cuadrado rojo final
             Container(
               width: 315, // Ancho deseado
               child: AspectRatio(
