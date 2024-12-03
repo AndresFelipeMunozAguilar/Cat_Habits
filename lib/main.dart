@@ -1,7 +1,10 @@
 import 'package:cat_habits/pages/home_screen.dart';
 import 'package:cat_habits/pages/session/login.dart';
 import 'package:cat_habits/pages/session/signup.dart';
+import 'package:cat_habits/pages/tutorial/initial_tutorial.dart';
 import 'package:flutter/material.dart';
+import 'package:cat_habits/Enviroment_vars/global_vars.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 void main() {
@@ -10,10 +13,12 @@ void main() {
   //con cualquier widget o realizar tareas asíncronas.
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(MyApp());
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
-
-const bool aux = true;
 
 //Esta es la animación que hace ver como si la siguiente página
 //entrara desde la derecha hacia la  izquierda al teléfono hasta
@@ -38,39 +43,48 @@ CustomTransitionPage _customPageTransition(Widget child, GoRouterState state) {
   );
 }
 
-class MyApp extends StatelessWidget {
-  MyApp({super.key});
-
-  final GoRouter _router = GoRouter(
-    initialLocation: '/login',
-    routes: <GoRoute>[
-      GoRoute(
-        path: "/",
-        pageBuilder: (context, state) => _customPageTransition(
-          const HomeScreen(),
-          state,
-        ),
-      ),
-      GoRoute(
-        path: "/login",
-        pageBuilder: (context, state) => _customPageTransition(
-          Login(),
-          state,
-        ),
-      ),
-      GoRoute(
-        path: "/signup",
-        pageBuilder: (context, state) => _customPageTransition(
-          Signup(),
-          state,
-        ),
-      ),
-    ],
-  );
+class MyApp extends ConsumerWidget {
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final tutorialOrLogin = ref.watch(isUserFirstTime);
+
+    final GoRouter router = GoRouter(
+      initialLocation: (tutorialOrLogin) ? '/initial_tutorial': '/login',
+      routes: <GoRoute>[
+        GoRoute(
+          path: "/",
+          pageBuilder: (context, state) => _customPageTransition(
+            const HomeScreen(),
+            state,
+          ),
+        ),
+        GoRoute(
+          path: "/login",
+          pageBuilder: (context, state) => _customPageTransition(
+            Login(),
+            state,
+          ),
+        ),
+        GoRoute(
+          path: "/signup",
+          pageBuilder: (context, state) => _customPageTransition(
+            Signup(),
+            state,
+          ),
+        ),
+        GoRoute(
+          path: "/initial_tutorial",
+          pageBuilder: (context, state) => _customPageTransition(
+            const InitialTutorial(),
+            state,
+          ),
+        ),
+      ],
+    );
+
     return MaterialApp.router(
       title: 'Cat Habits',
       debugShowCheckedModeBanner: false,
@@ -94,7 +108,7 @@ class MyApp extends StatelessWidget {
       //   useMaterial3: true,
       // ),
 
-      routerConfig: _router,
+      routerConfig: router,
     );
   }
 }

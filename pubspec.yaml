@@ -59,7 +59,15 @@ flutter:
   assets:
     - 'lib\Assets\Images\Logo_session.png'
     - 'lib\Assets\Images\image_crear_cuenta.png'
-    - 'lib\Assets\Images\'
+    - 'lib\Assets\Images\Calendario.png'
+    - 'lib\Assets\Images\dots1.png'
+    - 'lib\Assets\Images\dots2.png'
+    - 'lib\Assets\Images\dots3.png'
+    - 'lib\Assets\Images\emoji.png'
+    - 'lib\Assets\Images\habitos.png'
+    - 'lib\Assets\Images\image_crear_cuenta.png'
+    - 'lib\Assets\Images\Logo_session.png'
+    - 'lib\Assets\Images\statss.png'
 
 
   fonts:
