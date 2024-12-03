@@ -16,7 +16,7 @@
 3. Copiar los archivos "pubspec.yaml", "README.md" y la carpeta "lib" dentro de este proyecto en ejecución
 4. Correr el comando "flutter pub get" desde la carpeta raiz del proyecto en ejecución
 5. En el archivo *"test\widget_test.dart"*, en la linea *"await tester.pumpWidget(const MyApp());"* borrar la palabra  *"const"*
-6. Guardar nuevamente todos los archivos de la carpeta *"lib"*, *"lib/Assets/Images"*, *"main.dart"* y el archivo *"pubspec.yaml"*. Con esto me refiero a realizar un pequeño cambio (*Como poner un "Enter" en algún lugar que no comprometa la aplicación*) y luego guardar nuevamente el archivo. A diferencia de las páginas web, con las imágenes, sólo se tiene que presionar las teclas *ctl + s*.
+6. Guardar nuevamente todos los archivos de la carpeta *"lib"*, *"lib/Assets/Images"*, *"main.dart"* y el archivo *"pubspec.yaml"*. Con esto me refiero a realizar un pequeño cambio (*Como poner un "Enter" en algún lugar que no comprometa la aplicación*) y luego guardar nuevamente el archivo. A diferencia de las páginas web, con las imágenes, sólo se tiene que presionar las teclas ```ctl + s```.
 7. Realizar un Hot Restart 
 8. Interactuar con la aplicación
 
