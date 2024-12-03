@@ -1,4 +1,4 @@
-name: cat_habits
+name: cathabits
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -52,7 +52,42 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - assets/images/
 
+  fonts:
+    - family: Manrope
+      fonts:
+        - asset: assets/fonts/Manrope-VariableFont_wght.ttf
+
+    - family: Montserratblack 
+      fonts:
+        - asset: assets/fonts/Montserrat-Black.ttf
+
+    - family: Montserratextrabold 
+      fonts:
+        - asset: assets/fonts/Montserrat-ExtraBold.ttf
+    
+    - family: Montserratbold 
+      fonts:
+        - asset: assets/fonts/Montserrat-Bold.ttf
+
+    - family: Montserratsemibold 
+      fonts:
+        - asset: assets/fonts/Montserrat-SemiBold.ttf
+
+    - family: Montserratregular 
+      fonts:
+        - asset: assets/fonts/Montserrat-Regular.ttf
+
+    - family: Montserratmedium 
+      fonts:
+        - asset: assets/fonts/Montserrat-Medium.ttf
+
+    - family: Montserratlight 
+      fonts:
+        - asset: assets/fonts/Montserrat-Light.ttf
+  
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
