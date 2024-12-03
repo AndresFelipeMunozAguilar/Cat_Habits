@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:cat_habits/Enviroment_vars/global_vars.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   // Se utiliza  para garantizar que el entorno
@@ -13,11 +14,17 @@ void main() {
   //con cualquier widget o realizar tareas asíncronas.
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(
-    const ProviderScope(
-      child: MyApp(),
-    ),
-  );
+  // Bloquear la orientación a solo vertical (portrait)
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]).then((_) {
+    runApp(
+      const ProviderScope(
+        child: MyApp(),
+      ),
+    );
+  });
 }
 
 //Esta es la animación que hace ver como si la siguiente página
@@ -52,7 +59,7 @@ class MyApp extends ConsumerWidget {
     final tutorialOrLogin = ref.watch(isUserFirstTime);
 
     final GoRouter router = GoRouter(
-      initialLocation: (tutorialOrLogin) ? '/initial_tutorial': '/login',
+      initialLocation: (tutorialOrLogin) ? '/initial_tutorial' : '/login',
       routes: <GoRoute>[
         GoRoute(
           path: "/",
