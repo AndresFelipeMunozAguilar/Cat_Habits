@@ -10,7 +10,6 @@ void main() {
   //con cualquier widget o realizar tareas asíncronas.
   WidgetsFlutterBinding.ensureInitialized();
 
-
   runApp(MyApp());
 }
 

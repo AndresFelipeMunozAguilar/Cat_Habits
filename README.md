@@ -13,6 +13,7 @@
 ## Cómo correr la aplicación
 1. Crear un nuevo proyecto de flutter de nombre "cat_habits"
 2. Correr el proyecto
+<<<<<<< HEAD
 3. Copiar los archivos "pubspec.yaml", "README.md" y la carpeta "lib" dentro de este proyecto en ejecución
 4. Correr el comando "flutter pub get" desde la carpeta raiz del proyecto en ejecución
 5. En el archivo *"test\widget_test.dart"*, en la linea *"await tester.pumpWidget(const MyApp());"* borrar la palabra  *"const"*
@@ -20,6 +21,12 @@
 
 7. Realizar un Hot Restart 
 8. Interactuar con la aplicación
+=======
+3. Copiar el archivo "pubspec.yaml" y la carpeta "lib" dentro de este proyecto en ejecución
+4. Correr el comando "flutter pub get" desde la carpeta raiz del proyecto en ejecución
+5. Realizar un Hot Restart 
+6. Interactuar con la aplicación
+>>>>>>> fb803adc6cb20f690deb7ea83718ff14f3b48f84
 
 
 ### Autores

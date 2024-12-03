@@ -8,8 +8,8 @@ import 'package:google_fonts/google_fonts.dart';
 class Signup extends StatelessWidget {
   Signup({super.key});
 
-
   final StylesData _estilos = StylesData();
+  final SessionsData _sesiones = SessionsData();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _userController = TextEditingController();
