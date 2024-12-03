@@ -68,6 +68,10 @@ flutter:
     - 'lib\Assets\Images\image_crear_cuenta.png'
     - 'lib\Assets\Images\Logo_session.png'
     - 'lib\Assets\Images\statss.png'
+    - 'lib\Assets\Images\calendario_corrousel.png'
+    - 'lib\Assets\Images\get_to_know_you.png'
+    - 'lib\Assets\Images\estadisticas_corrousel.png'
+    - 'lib\Assets\Images\background_tasks.png'
 
 
   fonts:
