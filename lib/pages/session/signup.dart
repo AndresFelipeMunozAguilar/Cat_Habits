@@ -1,11 +1,12 @@
-import 'package:cat_habits/Enviroment_vars/sessions.dart';
+import 'package:cat_habits/Enviroment_vars/global_vars.dart';
 import 'package:cat_habits/Enviroment_vars/styles.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Signup extends StatelessWidget {
+class Signup extends ConsumerWidget {
   Signup({super.key});
 
   final StylesData _estilos = StylesData();
@@ -14,7 +15,7 @@ class Signup extends StatelessWidget {
   final TextEditingController _userController = TextEditingController();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     // No Ocultar la barra de navegación
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
 
@@ -123,6 +124,8 @@ class Signup extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
+                    // ya creaste la cuenta, vimos
+                    ref.read(isUserFirstTime.notifier).state = false;
                     _signup(context);
                   },
                   style: ElevatedButton.styleFrom(
@@ -266,7 +269,7 @@ class Signup extends StatelessWidget {
         ),
       );
 
-      formErrors.add( const SizedBox(height: 10));
+      formErrors.add(const SizedBox(height: 10));
     }
 
     // Expresión regular para validar el formato del correo electrónico
@@ -294,7 +297,7 @@ class Signup extends StatelessWidget {
         ),
       );
 
-      formErrors.add( const SizedBox(height: 10));
+      formErrors.add(const SizedBox(height: 10));
     }
 
     //Si tu contraseña es muy corta, añado ese error a una
@@ -319,7 +322,7 @@ class Signup extends StatelessWidget {
         ),
       );
 
-      formErrors.add( const SizedBox(height: 10));
+      formErrors.add(const SizedBox(height: 10));
     }
 
     // Si el formulario no tiene errores, entonces, vamonos a la siguiente pagina
