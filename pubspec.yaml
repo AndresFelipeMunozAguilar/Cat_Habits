@@ -59,6 +59,41 @@ flutter:
   assets:
     - 'lib\Assets\Images\Logo_session.png'
     - 'lib\Assets\Images\image_crear_cuenta.png'
+    - 'lib\Assets\Images\'
+
+
+  fonts:
+    - family: Manrope
+      fonts:
+        - asset: lib\Assets\Fonts\Manrope-VariableFont_wght.ttf
+
+    - family: Montserratblack 
+      fonts:
+        - asset: lib\Assets\Fonts\Montserrat-Black.ttf
+
+    - family: Montserratextrabold 
+      fonts:
+        - asset: lib\Assets\Fonts\Montserrat-ExtraBold.ttf
+
+    - family: Montserratbold 
+      fonts:
+        - asset: lib\Assets\Fonts\Montserrat-Bold.ttf
+
+    - family: Montserratsemibold 
+      fonts:
+        - asset: lib\Assets\Fonts\Montserrat-SemiBold.ttf
+
+    - family: Montserratregular 
+      fonts:
+        - asset: lib\Assets\Fonts\Montserrat-Regular.ttf
+
+    - family: Montserratmedium 
+      fonts:
+        - asset: lib\Assets\Fonts\Montserrat-Medium.ttf
+
+    - family: Montserratlight 
+      fonts:
+      - asset: lib\Assets\Fonts\Montserrat-Light.ttf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
